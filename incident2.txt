@@ -1,0 +1,9 @@
+Postmortem 2026-06-18: Complete outage of the CNC platform in Mexico prod for 2 hours
+15 minutes. The WireGuard concentrator instance became unreachable after an unattended
+kernel upgrade rebooted the host and the wg-quick service failed to start on boot due
+to a stale PID file. All 14 field units lost VPN connectivity; no telemetry was
+received during the window and two scheduled missions were aborted. Recovery required
+manual SSH via the bastion and a service restart. Follow-ups: enable and test
+wg-quick systemd service on boot in the AMI build, add a CloudWatch alarm on
+WgActivePeers dropping to zero, and disable unattended kernel upgrades on
+concentrator hosts.

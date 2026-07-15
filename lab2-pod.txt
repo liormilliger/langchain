@@ -1,0 +1,85 @@
+$ kubectl describe pod thor-core-7d9f8b6c54-x2vqp -n thor
+
+Name:             thor-core-7d9f8b6c54-x2vqp
+Namespace:        thor
+Priority:         0
+Service Account:  thor-core
+Node:             ip-172-31-42-117/172.31.42.117
+Start Time:       Mon, 13 Jul 2026 08:41:22 +0300
+Labels:           app.kubernetes.io/instance=thor-platform
+                  app.kubernetes.io/name=thor-core
+                  pod-template-hash=7d9f8b6c54
+Annotations:      helm.sh/chart: thor-core-1.4.2
+Status:           Running
+IP:               10.42.0.187
+IPs:
+  IP:             10.42.0.187
+Controlled By:    ReplicaSet/thor-core-7d9f8b6c54
+Containers:
+  thor-core:
+    Container ID:   containerd://8f3c1a9e2b7d4c6f0a1e5d8b3c7f2a9e4d6b1c8f3a7e2d9b4c6f1a8e3d7b2c9f
+    Image:          770161823328.dkr.ecr.eu-south-1.amazonaws.com/thor-core:2.11.3
+    Image ID:       770161823328.dkr.ecr.eu-south-1.amazonaws.com/thor-core@sha256:4e91c7d2a8f3b6e1d9c4a7f2e8b3d6c1f9a4e7d2b8c3f6a1e9d4c7b2f8a3e6d1
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Mon, 13 Jul 2026 09:12:47 +0300
+      Finished:     Mon, 13 Jul 2026 09:13:31 +0300
+    Ready:          False
+    Restart Count:  7
+    Limits:
+      cpu:     2
+      memory:  3Gi
+    Requests:
+      cpu:      500m
+      memory:   2Gi
+    Liveness:   http-get http://:8080/thor/actuator/health delay=90s timeout=5s period=15s #success=1 #failure=3
+    Readiness:  http-get http://:8080/thor/actuator/health delay=60s timeout=5s period=10s #success=1 #failure=3
+    Environment:
+      SPRING_PROFILES_ACTIVE:  k3s
+      ACTIVEMQ_BROKER_URL:     tcp://activemq.thor.svc.cluster.local:61616
+      ACTIVEMQ_USER:           <set to the key 'username' in secret 'thor-mq-credentials'>  Optional: false
+      ACTIVEMQ_PASSWORD:       <set to the key 'password' in secret 'thor-mq-credentials'>  Optional: false
+      POSTGRES_HOST:           postgres.thor.svc.cluster.local
+      POSTGRES_DB:             thor
+    Mounts:
+      /opt/thor/config from thor-core-config (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-k8m2n (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       False
+  ContainersReady             False
+  PodScheduled                True
+Volumes:
+  thor-core-config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      thor-core-config
+    Optional:  false
+  kube-api-access-k8m2n:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                    From               Message
+  ----     ------     ----                   ----               -------
+  Normal   Scheduled  33m                    default-scheduler  Successfully assigned thor/thor-core-7d9f8b6c54-x2vqp to ip-172-31-42-117
+  Normal   Pulling    33m                    kubelet            Pulling image "770161823328.dkr.ecr.eu-south-1.amazonaws.com/thor-core:2.11.3"
+  Normal   Pulled     32m                    kubelet            Successfully pulled image "770161823328.dkr.ecr.eu-south-1.amazonaws.com/thor-core:2.11.3" in 41.238s (41.238s including waiting)
+  Warning  Failed     30m (x2 over 31m)      kubelet            Error: secret "thor-mq-credentials" not found
+  Normal   Pulled     29m (x3 over 31m)      kubelet            Container image "770161823328.dkr.ecr.eu-south-1.amazonaws.com/thor-core:2.11.3" already present on machine
+  Normal   Created    29m (x3 over 32m)      kubelet            Created container: thor-core
+  Normal   Started    29m (x3 over 32m)      kubelet            Started container thor-core
+  Warning  Unhealthy  27m (x6 over 30m)      kubelet            Readiness probe failed: HTTP probe failed with statuscode: 503
+  Warning  Unhealthy  27m (x3 over 28m)      kubelet            Liveness probe failed: HTTP probe failed with statuscode: 503
+  Normal   Killing    27m                    kubelet            Container thor-core failed liveness probe, will be restarted
+  Warning  BackOff    3m12s (x84 over 26m)   kubelet            Back-off restarting failed container thor-core in pod thor-core-7d9f8b6c54-x2vqp_thor(9c4e7f2a-1d8b-4c6f-a3e9-d7b2c8f1a4e6)

@@ -1,0 +1,7 @@
+Postmortem 2026-07-02: During the rollout of thor-core chart 1.4.2 to Italy prod,
+thor-core pods entered CrashLoopBackOff for roughly 40 minutes. The post-upgrade
+passport hook Job failed because the secret thor-mq-credentials was missing in the
+thor namespace, which blocked the HelmRelease from reconciling. Service was restored
+after the secret was manually recreated and the HelmRelease was resumed. Follow-ups:
+add a pre-upgrade check that required secrets exist, and add an alert on hook Job
+failures. Customer impact was limited to delayed telemetry ingestion; no data loss.

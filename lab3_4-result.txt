@@ -1,0 +1,25 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab3_4.py
+{
+  "service": "prod",
+  "severity": "SEV2",
+  "root_cause": "ECR image pull failure due to repository policy change",
+  "action_items": [
+    {
+      "task": "Add canary pipeline step",
+      "owner": "Max",
+      "deadline": "2026-07-20"
+    },
+    {
+      "task": "Document ECR repository policy change process",
+      "owner": "Roberto",
+      "deadline": "End of month"
+    },
+    {
+      "task": "Add alarm for 403 error rates on ECR",
+      "owner": "Platform Team",
+      "deadline": "N/A"
+    }
+  ]
+}
+---
+First item owner: Max

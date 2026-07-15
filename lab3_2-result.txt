@@ -1,0 +1,12 @@
+<class '__main__.IncidentReport'>
+{
+  "service": "thor-core",
+  "severity": "SEV2",
+  "root_cause": "Missing secret thor-mq-credentials in thor namespace during HelmRelease",
+  "action_items": [
+    "Add pre-upgrade check for secrets existence",
+    "Implement alert for hook Job failures"
+  ]
+}
+---
+First action item: Add pre-upgrade check for secrets existence

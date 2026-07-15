@@ -1,0 +1,6 @@
+Postmortem 2026-05-30: Grafana dashboards in Ireland staging showed stale data for
+about 6 hours. Cause not conclusively determined; Prometheus remote-write to the
+central store was timing out intermittently and recovered without intervention.
+Network path and target store metrics were inspected but nothing anomalous was found.
+No customer impact, staging only. Follow-up: add logging to the remote-write retry
+path to capture diagnostics if it recurs.

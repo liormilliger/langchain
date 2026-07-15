@@ -1,0 +1,9 @@
+Postmortem 2026-07-08: Deployments to Belgrade prod failed for 3 hours. The
+cnc-ansible-runner image pull from public ECR began failing with 403 errors after
+the repository policy was accidentally tightened during a cleanup. CI/CD pipelines
+in Bitbucket were red for the whole window; no field units were affected. The
+policy was rolled back by the platform team. Follow-ups: Max will add a canary
+pipeline step that pulls the image from a clean environment, due by July 20.
+Roberto will document the ECR repository policy change process in Confluence by
+end of month. The platform team will add an alarm on ECR 403 error rates, no
+deadline set.

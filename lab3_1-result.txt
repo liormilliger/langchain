@@ -1,0 +1,16 @@
+<class '__main__.IncidentReport'>
+{
+  "service": "thor-core",
+  "severity": "minor",
+  "root_cause": "missing secret thor-mq-credentials",
+  "action_items": [
+    "add a pre-upgrade check that required secrets exist"
+  ]
+}
+---
+First action item: add a pre-upgrade check that required secrets exist
+
+=================
+Missing add an alert on hook Job failures in action items
+
+severity should have output SEV3 rather than "minor" as it shoukd output the key and not the value (the token)
