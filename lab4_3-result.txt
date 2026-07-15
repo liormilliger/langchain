@@ -1,0 +1,6 @@
+[0]×[1]  0.948   'pod keeps restarting' × 'the pod is restarting over and over again'
+[0]×[2]  0.861   'pod keeps restarting' × 'never restart the pod'
+[0]×[3]  0.350   'pod keeps restarting' × "my grandmother's baklava recipe"
+[1]×[2]  0.826   'the pod is restarting over and over again' × 'never restart the pod'
+[1]×[3]  0.395   'the pod is restarting over and over again' × "my grandmother's baklava recipe"
+[2]×[3]  0.355   'never restart the pod' × "my grandmother's baklava recipe"
