@@ -1,0 +1,5 @@
+start: 4
+after re-ingest of runbook (4 chunks): 4
+after ingesting wireguard-notes (1 chunks): 5
+after re-ingesting wireguard-notes: 5
+after surgical delete of wireguard-notes: 4
