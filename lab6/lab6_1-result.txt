@@ -1,0 +1,23 @@
+/root/langchain/lab6_1.py:4: DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.
+  from langchain_community.document_loaders import TextLoader
+loaded: 1 Document(s)
+metadata: {'source': 'thor-runbook.md'}
+total chars: 2172
+
+chunks: 4
+
+--- chunk 0  (753 chars)  meta={'source': 'thor-runbook.md'}
+# Thor Platform Runbook — Field Operations (labs 6)  ## 1. CrashLoopBackOff on thor-core  When thor-core pods enter Cras ...
+    ...ends with: ...reconciliation cycles, roughly three minutes.  ## 2. WireGuard connectivity loss
+
+--- chunk 1  (610 chars)  meta={'source': 'thor-runbook.md'}
+## 2. WireGuard connectivity loss  If a field unit shows zero handshakes, verify in this order: the concentrator securit ...
+    ...ends with: ... and takes the unit offline for the duration.  ## 3. ActiveMQ queue depth growth
+
+--- chunk 2  (483 chars)  meta={'source': 'thor-runbook.md'}
+## 3. ActiveMQ queue depth growth  Steadily growing queue depth almost always means consumers are down or too slow, not  ...
+    ...ends with: ...ts do not retransmit acknowledged batches.  ## 4. Postgres connection exhaustion
+
+--- chunk 3  (427 chars)  meta={'source': 'thor-runbook.md'}
+## 4. Postgres connection exhaustion  Connection pool exhaustion presents as intermittent application timeouts while the ...
+    ...ends with: ...ucing per-replica pool size is almost always safer than raising max_connections

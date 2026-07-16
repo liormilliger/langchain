@@ -1,0 +1,25 @@
+=== unfiltered ===
+0.685  [prod]  Never restart thor-core pods manually; fix the underlying HelmRelease instead.
+0.557  [staging]  CrashLoopBackOff usually indicates the container exits shortly after start.
+0.511  [prod]  To resume a suspended HelmRelease, run flux resume helmrelease thor-platform.
+
+=== env=staging only ===
+0.557  [staging]  CrashLoopBackOff usually indicates the container exits shortly after start.
+0.435  [staging]  ActiveMQ queue depth growing steadily suggests consumers are down or too slow.
+0.433  [staging]  The baklava must rest overnight before serving.
+(venv) root@ip-172-31-41-244:~/langchain# vim lab5_5.py
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab5_5.py
+=== Act 1: staging, k=3, score_threshold=0.45 ===
+(1 hits)
+0.557  [staging]  CrashLoopBackOff usually indicates the container exits shortly after start.
+
+=== Act 2: delete all staging points ===
+points remaining: 4
+
+=== same staging search, after the purge ===
+(0 hits)
+
+=== unfiltered, after the purge ===
+0.685  [prod]  Never restart thor-core pods manually; fix the underlying HelmRelease instead.
+0.511  [prod]  To resume a suspended HelmRelease, run flux resume helmrelease thor-platform.
+0.440  [prod]  Postgres connection pool exhaustion: check max_connections and pgbouncer settings.

@@ -41,4 +41,5 @@ pip install -U \
   langgraph \
   pypdf unstructured[md] \
   atlassian-python-api \
-  python-dotenv ipython
+  python-dotenv ipython \
+  fpdf2
