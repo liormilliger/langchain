@@ -1,0 +1,11 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab7_1.py
+QUESTION: pod keeps restarting, what should I do? 
+ANSWER: Don't have documentation for it. The context only provides information about troubleshooting specific issues with thor-core pods and ActiveMQ queues, but does not mention Postgres connection exhaustion.
+
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab7_1.py
+QUESTION: pod keeps restarting, what should I do? 
+ANSWER: Don't restart the pods manually. Instead, inspect the last termination reason with kubectl describe pod, and check whether the post-upgrade passport hook Job completed. If the secret is missing, recreate it from Secrets Manager and resume the HelmRelease with flux resume helmrelease thor-platform.
+
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab7_1.py
+QUESTION: pod keeps restarting, what should I do? 
+ANSWER: Don't restart the pods manually. Instead, inspect the last termination reason with kubectl describe pod, and check whether the post-upgrade passport hook Job completed. If the secret is missing, recreate it from Secrets Manager and resume the HelmRelease with flux resume helmrelease thor-platform.
