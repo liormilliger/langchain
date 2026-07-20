@@ -1,0 +1,4 @@
+A: REFUSAL  ←  I don't have documentation for that.
+B: ANSWERED  ←  The runbook doesn't cover Grafana administration.
+C: REFUSAL  ←  Queue depth growth does not mention producers; consumers are the cause per the context.
+D: ANSWERED  ←  Purging is always safe and requires no approval.
