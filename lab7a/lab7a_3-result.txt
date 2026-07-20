@@ -1,0 +1,23 @@
+<class 'langchain_core.prompt_values.ChatPromptValue'>
+Answer ONLY from this context. If the answer isn't in the context, say you don't have documentation for it.
+
+Context:
+AA
+Traceback (most recent call last):
+  File "/root/langchain/lab7a_3.py", line 16, in <module>
+    msgs = prompt.invoke({"context": "AAAA"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain_core/prompts/base.py", line 230, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 2289, in _call_with_config
+    context.run(
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain_core/runnables/config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain_core/prompts/base.py", line 200, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain_core/prompts/base.py", line 192, in _validate_input
+    raise KeyError(
+KeyError: "Input to ChatPromptTemplate is missing variables {'question'}.  Expected: ['context', 'question'] Received: ['context']\nNote: if you intended {question} to be part of the string and not a variable, please escape it with double curly braces like: '{{question}}'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT "

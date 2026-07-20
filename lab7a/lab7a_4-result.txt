@@ -1,0 +1,4 @@
+<class 'dict'>
+dict_keys(['context', 'question'])
+QUESTION value: 'can I purge queues in production?'
+CONTEXT value, first 150: '## 3. ActiveMQ queue depth growth\n\nSteadily growing queue depth almost always means consumers are down or too slow,\nnot that producers are too fast. C'

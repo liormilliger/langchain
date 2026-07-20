@@ -1,0 +1,6 @@
+<class 'list'>
+<class 'langchain_core.documents.base.Document'>
+# Thor Platform Runbook — Field Operations (labs 6)
+
+## 1. C
+{'source': 'thor-runbook.md', '_id': '1db5dc89-bdd7-5bee-aac7-6b6a91b61621', '_collection_name': 'chunks_800'}

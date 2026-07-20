@@ -1,0 +1,2 @@
+<class 'str'>
+'AAAA\n\n---\n\nBBBB'

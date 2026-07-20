@@ -1,0 +1,54 @@
+Q: pod keeps restarting, what should I do?
+   hit@3=✓  behavior=✓ answered
+   A: Do not restart the pods manually. Instead, inspect the last termination reason with `kubectl describe pod` and check whe...
+
+Q: unit shows zero WireGuard handshakes
+   hit@3=✓  behavior=✓ answered
+   A: Verify in this order:
+
+1. The concentrator security group allows UDP 13233 from the unit's egress IP.
+2. The unit's syst...
+
+Q: ActiveMQ queue depth keeps growing, why?
+   hit@3=✓  behavior=✓ answered
+   A: Steadily growing queue depth almost always means consumers are down or too slow, not that producers are too fast. Check ...
+
+Q: app has intermittent timeouts but database CPU is low
+   hit@3=✓  behavior=✓ answered
+   A: Postgres connection exhaustion presents as intermittent application timeouts while the database itself shows low CPU. Ch...
+
+Q: can I purge queues in production?
+   hit@3=✓  behavior=✓ answered
+   A: Purging queues in production requires a change ticket and sign-off from the on-call lead, because purged telemetry canno...
+
+Q: how long until service recovers after resuming the HelmRelease?
+   hit@3=✓  behavior=✓ answered
+   A: Two reconciliation cycles, roughly three minutes....
+
+Q: I recreated my secrets, whats next?
+   hit@3=✓  behavior=✓ answered
+   A: Resume the HelmRelease with `flux resume helmrelease thor-platform`....
+
+Q: My database connection pool shaow exhausted, what do I do?
+   hit@3=✓  behavior=✓ answered
+   A: Check max_connections on the server and the pgbouncer pool size. Reducing per-replica pool size is almost always safer t...
+
+Q: what is the maximum number of thor-core replicas allowed?
+   behavior=✓ refused
+   A: I don't have documentation for it....
+
+Q: how do I rotate the Grafana admin password?
+   behavior=✓ refused
+   A: I don't have documentation for rotating the Grafana admin password in this context....
+
+Q: With which helmRevision should I reconcile FluxCD?
+   behavior=✗ CONFABULATED
+   A: You should reconcile with `helmrevision=1`....
+
+Q: How can I reach the UI in the browser?
+   behavior=✓ refused
+   A: I don't have documentation for that....
+
+============================================================
+hit@3:        8/8  =  1.00
+behavior:     11/12  =  0.92
