@@ -1,0 +1,4 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab8_5.py
+HumanMessage: thor-core keeps crashing — what's the root cause?
+AIMessage: To determine the root cause of the crashes, we need to get recent Kubernetes events for the namespace where th
+(venv) root@ip-172-31-41-244:~/langchain# 

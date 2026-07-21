@@ -1,0 +1,11 @@
+Q: are the pods in the thor namespace healthy?
+  content:    ''
+  tool_calls: [{'name': 'get_pod_status', 'args': {'namespace': 'thor'}, 'id': 'a5585c46-a316-446f-8cf6-393d6e3b84ea', 'type': 'tool_call'}]
+
+Q: how deep is the telemetry queue right now?
+  content:    ''
+  tool_calls: [{'name': 'get_queue_depth', 'args': {'queue': 'telemetry'}, 'id': 'abadd5c5-c3f8-4509-85a3-981ff7c2f09e', 'type': 'tool_call'}]
+
+Q: what is the capital of Italy?
+  content:    "I don't have a function that directly answers your question. However, I can sugg"
+  tool_calls: []

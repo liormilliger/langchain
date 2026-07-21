@@ -1,0 +1,5 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab8_5.py
+HumanMessage: thor-core keeps crashing — what's the root cause?
+AIMessage: →calls ['get_recent_events']
+ToolMessage: No events for thor-core.
+AIMessage: {"name": "get_logs", "parameters": {"namespace":"thor-core"}}

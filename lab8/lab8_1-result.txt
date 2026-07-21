@@ -1,0 +1,8 @@
+<class 'langchain_core.tools.structured.StructuredTool'>
+name:        get_pod_status
+description: Get the status of all pods in a Kubernetes namespace.
+args schema: {'namespace': {'title': 'Namespace', 'type': 'string'}}
+
+invoke result:
+thor-core-7d9f   1/1  Running   0   3d
+postgres-0   1/1  Running   0   9d
