@@ -1,0 +1,14 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab9_4.py
+Traceback (most recent call last):
+  File "/root/langchain/lab9_4.py", line 22, in <module>
+    PIIMiddleware("api_key", strategy="block"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain/agents/middleware/pii.py", line 633, in __init__
+    ).resolve()
+      ^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain/agents/middleware/_redaction.py", line 411, in resolve
+    resolved_detector = resolve_detector(self.pii_type, self.detector)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/langchain/venv/lib/python3.12/site-packages/langchain/agents/middleware/_redaction.py", line 359, in resolve_detector
+    raise ValueError(msg)
+ValueError: Unknown PII type: api_key. Must be one of ['email', 'credit_card', 'ip', 'mac_address', 'url'] or provide a custom detector.

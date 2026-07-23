@@ -1,0 +1,6 @@
+=== APPROVE ===
+   >>> TOOL BODY ACTUALLY RAN: restarting thor-core
+   final: {"status_code": 200, "message": "deployment restarted successfully"}
+
+=== REJECT ===
+   final: The deployment restart request has been rejected by the user. Please confirm if you would like to proceed with the resta 

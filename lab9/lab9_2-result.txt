@@ -1,0 +1,10 @@
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab9_2.py
+=== after invoke 1 ===
+last message type: AIMessage
+INTERRUPTED — awaiting human decision:
+[Interrupt(value={'action_requests': [{'name': 'restart_deployment', 'args': {'name': 'thor-core'}, 'description': "Tool execution requires approval\n\nTool: restart_deployment\nArgs: {'name': 'thor-core'}"}], 'review_configs': [{'action_name': 'restart_deployment', 'allowed_decisions': ['approve', 'reject']}]}, id='67bda7f6b69e39b067d630c406df26a8')]
+(venv) root@ip-172-31-41-244:~/langchain# python3 lab9_2.py
+=== after invoke 1 ===
+last message type: AIMessage
+INTERRUPTED — awaiting human decision:
+[Interrupt(value={'action_requests': [{'name': 'restart_deployment', 'args': {'name': 'thor-core'}, 'description': "Tool execution requires approval\n\nTool: restart_deployment\nArgs: {'name': 'thor-core'}"}], 'review_configs': [{'action_name': 'restart_deployment', 'allowed_decisions': ['approve', 'reject']}]}, id='4916fc2256579d9e860668673488dc96')]

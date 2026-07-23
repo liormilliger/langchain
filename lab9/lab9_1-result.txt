@@ -1,0 +1,10 @@
+=== Agent A (no memory) ===
+turn 1: Nice to meet you, Lior! As the maintainer of the Thor namespace, what kind of pr
+turn 2: I don't have any information about your name or the namespace you're running in.
+
+=== Agent B (memory, thread=lior-session-1) ===
+turn 1: Nice to meet you, Lior! As the maintainer of the Thor namespace, what kind of pr
+turn 2: Your name is Lior. You run the thor namespace.
+
+=== Agent B (memory, thread=someone-else) ===
+turn 1: I don't have any information about your name or the namespace you're running in.
